@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutterlearn/ClassInfoWidget.dart';
-import 'package:flutterlearn/UserCommentWidget.dart';
-import 'ScoreDistributePlot.dart';
-import 'SendCommentWidget.dart';
+import 'package:flutterlearn/widget/ClassInfoWidget.dart';
+import 'package:flutterlearn/widget/UserCommentWidget.dart';
+import '../widget/ScoreDistributePlot.dart';
+import '../widget/SendCommentWidget.dart';
 
 class ClassInfoPage extends StatefulWidget {
   @override
@@ -58,7 +58,9 @@ class _ClassInfoPageState extends State<ClassInfoPage> {
 
   ///下拉手势 刷新界面
   Future _refresh() async {
-    _initialize();
+    setState(() {
+      _initialize();
+    });
     return;
   }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlearn/UserAccountAvatar.dart';
-import 'package:flutterlearn/UserCommentStatusBar.dart';
+import 'package:flutterlearn/widget/UserAccountAvatar.dart';
+import 'package:flutterlearn/widget/UserCommentStatusBar.dart';
 
 class UserCommentWidget extends StatelessWidget {
  final String accountName;

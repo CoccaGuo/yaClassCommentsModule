@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlearn/ClassInfoPage.dart';
+import 'package:flutterlearn/pages/ClassInfoPage.dart';
+import 'package:flutterlearn/theme/Themes.dart';
 
 
 void main() {
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: crowTheme(),
         home: Scaffold(
-          appBar: AppBar(title: Text("Cocca Works")),
+          appBar: AppBar(title: Text("课程评价")),
           body: MyLayout(),
     ));
   }

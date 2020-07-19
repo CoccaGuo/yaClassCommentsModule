@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 ///点赞、反对、发表时间区
 class UserCommentStatusBar extends StatefulWidget {
@@ -18,7 +19,7 @@ class _StatusBarState extends State<UserCommentStatusBar> {
 
   @override
   Widget build(BuildContext context) {
-    var cmtTimeWidget = Text(widget.commentTime,style: TextStyle(color: Colors.black54,fontSize: 12),);
+    var cmtTimeWidget = Text(DateFormat('yyyy-MM-dd HH:mm').format(DateTime.fromMillisecondsSinceEpoch(int.parse(widget.commentTime))),style: TextStyle(color: Colors.grey,fontSize: 12),);
     var goodCountWidget = InkWell(child:Container(padding:EdgeInsets.all(5.0),child:Text("赞成($goodCount)",style: TextStyle(color: Colors.teal,fontSize: 12))),onTap: (){
       setState(() {
         goodCount++;
